@@ -37,7 +37,9 @@ function carbonate (input) {
   let i = -1
   let matches
 
-  while ((matches = tmplRe.exec(input)) !== null && i++) {
+  while ((matches = tmplRe.exec(interpolated)) !== null) {
+    i++
+
     if (typeof vars[i] === 'undefined') {
       return
     }
@@ -61,9 +63,10 @@ function carbonate (input) {
       throw new Error(`[carbonate] unrecognised type specifier "${matches[1]}".`)
     }
 
-    interpolated = input.substr(0, start)
-    interpolated += fn(formatter(vars[i]))
-    interpolated += input.substr(end)
+    let newStr = interpolated.substr(0, start)
+    newStr += fn(formatter(vars[i]))
+    newStr += interpolated.substr(end)
+    interpolated = newStr
   }
 
   return interpolated

@@ -17,11 +17,13 @@ test('handles chalk chains', () => {
 })
 
 test('handles multiple placeholders', () => {
-  sprintf('Hello %s(green.underline.bold), how are you %s(green.underline.bold)?', 'Sam', 'today')
+  const str = sprintf('Hello %s(green.underline.bold), how are you %s(green.underline.bold)?', 'Sam', 'today')
+  expect(str).toBe(`Hello ${chalk.green.underline.bold('Sam')}, how are you ${chalk.green.underline.bold('today')}?`)
 })
 
-test('colour multiple with and without colour', () => {
-  sprintf('Hello %s, how are you %s(green.underline.bold)?', 'Sam', 'today')
+test('multiple with and without colour', () => {
+  const str = sprintf('Hello %s, how are you %s(green.underline.bold)?', 'Sam', 'today')
+  expect(str).toBe(`Hello Sam, how are you ${chalk.green.underline.bold('today')}?`)
 })
 
 test('works with different specifiers', () => {
