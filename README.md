@@ -7,15 +7,16 @@ Made with ❤ at [@outlandish](http://www.twitter.com/outlandish)
 <a href="http://badge.fury.io/js/carbonate"><img alt="npm version" src="https://badge.fury.io/js/carbonate.svg"></a>
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-🍪 Give some colour to your sprintf strings with [`chalk`]().
+```js
+sprintf('I do not like %s(green) and ham.', 'green eggs')
+sprintf('I do not like them, %s(yellow.bold.underline).', 'Sam-I-am')
+```
+
+🍪 Give some colour to your sprintf strings with [chalk](https://github.com/chalk/chalk).
 
 ✨ Written for ES2015 environments.
  
 👉 Use your preferred bundler and transpiler as required.
-
-```js
-const str = sprintf('Hello, %s(green.bold)!', 'World')
-```
 
 ## Install
 
@@ -54,10 +55,10 @@ Examples:
 
 ```js
 // simple colour
-sprintf('I do not like %s(green) eggs and ham.', 'green')
+sprintf('I do not like %s(green) and ham.', 'green eggs')
 
 // use chalk's chaining for bold, etc.
-sprintf('I do not like them, %s(yellow.bold.underline) I am.', 'Sam')
+sprintf('I do not like them, %s(yellow.bold.underline).', 'Sam-I-am')
 ```
 
 ### `sprintf.log(str[, ...values])`
