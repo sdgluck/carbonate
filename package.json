@@ -1,0 +1,33 @@
+{
+  "name": "carbonate",
+  "version": "1.0.0",
+  "description": "colourful sprintf",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdgluck/carbonate.git"
+  },
+  "keywords": [
+    "chalk",
+    "carbonate",
+    "colour",
+    "string",
+    "str",
+    "color",
+    "colours",
+    "colors"
+  ],
+  "author": "Sam Gluck <sdgluck@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sdgluck/carbonate/issues"
+  },
+  "homepage": "https://github.com/sdgluck/carbonate#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "jest": "^19.0.2"
+  }
+}
